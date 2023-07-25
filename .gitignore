@@ -25,3 +25,5 @@ yarn.lock
 
 .DS_Store
 Thumbs.db
+
+client.rest

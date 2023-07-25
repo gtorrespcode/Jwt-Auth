@@ -1,0 +1,21 @@
+
+POST http://localhost:3000/user
+Content-Type: application/json
+
+    {
+        "name": "Gabriel",
+        "username": "TheTorres",
+        "email": "thetorres@gamil.com",
+        "password": "MinhaSenha123"
+        
+    }
+
+###
+POST http://localhost:3000/user          
+Content-Type: application/json
+    {
+    "name": "Gabriel",
+    "username": "TheTorres",
+    "email": "thetorres@gamil.com",
+    "password": "senhasimples123"
+    }  
