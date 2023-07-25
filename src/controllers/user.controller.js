@@ -28,4 +28,39 @@ const create = async (req, res) => {
   }
 };
 
-export default { create };
+const findAll = async (req, res) => {
+try {
+  const users = await userService.findAllService();
+
+  if (!users || users.length === 0) {
+    res.status(400).send({ message: "There are not users in this database" });
+
+  }
+
+  res.send(users);
+
+} catch (err){
+  res.status(400).send({ message: err.message });
+
+}
+}
+
+const findById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const user = await userService.findByIdService(id);
+
+    if(!user){
+      res.status(400).send({ message: "User not found" });
+
+    }
+
+    res.send(user);
+
+  } catch(err){
+    res.status(400).send({ message: err.message });
+
+  }
+}
+
+export default { create, findAll, findById };
