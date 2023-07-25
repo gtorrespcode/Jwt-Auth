@@ -47,14 +47,7 @@ try {
 
 const findById = async (req, res) => {
   try {
-    const id = req.params.id;
-    const user = await userService.findByIdService(id);
-
-    if(!user){
-      res.status(400).send({ message: "User not found" });
-
-    }
-
+    const user = req.user
     res.send(user);
 
   } catch(err){
@@ -63,4 +56,25 @@ const findById = async (req, res) => {
   }
 }
 
-export default { create, findAll, findById };
+const update = async (req, res) => {
+  try {
+    
+    const {name, username, email, password} = req.body;
+    
+    if(!name && !username && !email && !password ){
+      res.status(400).send({ message: "Submit at least one of the fields" });
+    }
+
+
+    await userService.updateService(req.id, name, username, email, password);
+    res.send({message: "Update made successfully"})
+
+    
+
+  } catch(err){
+    res.status(400).send({ message: err.message });
+
+  }
+}
+
+export default { create, findAll, findById, update };

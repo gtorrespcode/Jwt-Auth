@@ -19,3 +19,10 @@ GET http://localhost:3000/user
 GET http://localhost:3000/user/64bf5fbc009f90d21f9925cb
 
 ###
+
+PATCH  http://localhost:3000/user/64bf5fbc009f90d21f9925cb
+Content-Type: application/json
+
+    {
+        "username": "TheTorres"
+    }
