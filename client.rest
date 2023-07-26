@@ -3,10 +3,10 @@ POST http://localhost:3000/user
 Content-Type: application/json
 
     {
-        "name": "Gabriel",
-        "username": "TheTorres",
-        "email": "thetorres@gamil.com",
-        "password": "MinhaSenha123"
+        "name": "Botelho",
+        "username": "eraghost",
+        "email": "eraghost@gamil.com",
+        "password": "MinhaSenha456"
         
     }
 
@@ -16,7 +16,7 @@ GET http://localhost:3000/user
 
 ###
 
-GET http://localhost:3000/user/64bf5fbc009f90d21f9925cb
+GET http://localhost:3000/user/64c0bf6bea2013eba88b1d41
 
 ###
 
@@ -26,3 +26,16 @@ Content-Type: application/json
     {
         "username": "TheTorres"
     }
+
+###
+
+POST http://localhost:3000/auth
+Content-Type: application/json
+
+    {
+        "email": "eraghost@gamil.com",
+        "password": "MinhaSenha456"
+    }
+
+###
+
