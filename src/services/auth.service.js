@@ -7,4 +7,3 @@ export const loginService = (email) =>
 
 export const createToken = (id) => jwt.sign({id: id}, jwtSecret, {expiresIn: 51})
 
-  

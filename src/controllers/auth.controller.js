@@ -24,3 +24,7 @@ export const login = async (req, res) => {
     res.status(400).send({ message: err.message });
   }
 };
+
+export const confirm = async (req, res) => {
+    res.send({message: "Permission accepted"});
+}

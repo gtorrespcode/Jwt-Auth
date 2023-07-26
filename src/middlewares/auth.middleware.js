@@ -33,6 +33,8 @@ export const authMiddleware = (req, res, next) => {
         return res.status(400).send({ message: "Invalid token" });
       }
 
+      console.log("You are allowed");
+
       req.userId = user.id;
       return next();
     });

@@ -39,3 +39,7 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:3000/auth/confirm
+Content-Type: application/json
+Authorization: Bearer .eyJpZCI6IjY0YzBiZjZiZWEyMDEzZWJhODhiMWQ0MSIsImlhdCI6MTY5MDM1Njg3MiwiZXhwIjoxNjkwMzU2OTIzfQ.kuKOlU46-FLS1EyRlKJNkZykpyQ4Me3G3RC0bzdNWW4
+
